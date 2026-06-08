@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:gravity="center_vertical"
+    android:background="?android:attr/selectableItemBackground">
+
+    <!-- Иконка урока -->
+    <ImageView
+        android:id="@+id/ivLessonIcon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_lesson_default"
+        android:contentDescription="Иконка урока"
+        android:background="#1A237E"
+        android:padding="8dp"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Название урока -->
+    <TextView
+        android:id="@+id/tvLessonTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Название урока"
+        android:textSize="18sp"
+        android:textColor="#212121" />
+
+    <!-- Галочка завершения (скрыта по умолчанию) -->
+    <ImageView
+        android:id="@+id/ivCompleted"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_check"
+        android:contentDescription="Завершено"
+        android:visibility="gone"
+        android:layout_marginEnd="8dp" />
+    <!-- Индикатор стрелки -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="→"
+        android:textSize="24sp"
+        android:textColor="#757575" />
+
+</LinearLayout>

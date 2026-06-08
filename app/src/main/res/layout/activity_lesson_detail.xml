@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <!-- Заголовок урока -->
+    <TextView
+        android:id="@+id/tvLessonTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Урок 1"
+        android:textSize="24sp"
+        android:textColor="#1A237E"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Прогресс-бар -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Контент шага -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Изображение шага -->
+            <ImageView
+                android:id="@+id/ivStepImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerInside"
+                android:adjustViewBounds="true"
+                android:visibility="gone"
+                android:contentDescription="Иллюстрация к шагу"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Текст шага -->
+            <TextView
+                android:id="@+id/tvStepContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Содержимое шага..."
+                android:textSize="18sp"
+                android:textColor="#212121"
+                android:lineSpacingMultiplier="1.2" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Кнопки навигации -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnPrev"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Назад"
+            android:backgroundTint="#757575"
+            android:enabled="false"
+            android:layout_marginEnd="4dp" />
+
+        <Button
+            android:id="@+id/btnComplete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Завершить"
+            android:backgroundTint="#4CAF50"
+            android:visibility="gone"
+            android:layout_marginHorizontal="4dp" />
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Далее"
+            android:backgroundTint="#1A237E"
+            android:layout_marginStart="4dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
