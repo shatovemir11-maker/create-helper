@@ -24,7 +24,7 @@ object DatabaseSeeder {
                 )
             )
 
-            // Шаги (часть с картинками)
+            // Шаги 
             stepDao.insertAll(
                 listOf(
                     StepEntity(lessonId = 1, stepNumber = 1, content = "Добро пожаловать в мир механизмов Create! Сегодня вы узнаете, с чего начать."),
